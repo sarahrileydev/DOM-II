@@ -42,32 +42,39 @@ five.forEach(function(index, i){
 });
 
 // six 
-const six = document.querySelector(".nav-container");
-six.addEventListener("load", function(event) {
+window.addEventListener('load', function() {
+  alert("All set!");
+})
+
+// seven
+const seven = document.querySelector(".footer");
+seven.addEventListener("dblclick", function(event) {
   event.stopPropagation();
-  event.target.style.backgroundColor = "teal";
+  event.target.style.backgroundColor = "purple";
 });
 
-const seven = document.querySelector(".nav-container");
-seven.addEventListener("focus", function(event) {
-  event.stopPropagation();
-  event.target.style.backgroundColor = "teal";
+// eight
+let newInput = document.createElement("input");
+newInput.textContent = "Here is some input. You're welcome!";
+
+const eight = document.querySelector("input");
+eight.addEventListener("keydown", function(event) {
+  console.log("I've been hit!"); 
 });
 
-const eight = document.querySelector(".nav-container");
-eight.addEventListener("scroll", function(event) {
+
+// nine
+const nine = document.querySelector("input");
+nine.addEventListener("select", function(event) {
   event.stopPropagation();
-  event.target.style.backgroundColor = "teal";
+  event.target.style.backgroundColor = "yellow";
 });
 
-const nine = document.querySelector(".nav-container");
-nine.addEventListener("resize", function(event) {
-  event.stopPropagation();
-  event.target.style.backgroundColor = "teal";
+// ten 
+const ten = document.querySelectorAll("img");
+ten.forEach(function(index, i){
+  ten[i].addEventListener('wheel', function(event) {
+      event.target.style.opacity = .5;
+  });
 });
 
-const ten = document.querySelector(".nav-container");
-ten.addEventListener("select", function(event) {
-  event.stopPropagation();
-  event.target.style.backgroundColor = "teal";
-});
