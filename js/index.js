@@ -5,6 +5,7 @@ const one = document.querySelectorAll(".nav-link");
 one.forEach(function(index, i){
   one[i].addEventListener('click', function(event) {
       event.target.style.color = 'crimson';
+      event.preventDefault();
   });
 });
 
@@ -13,6 +14,11 @@ const two = document.querySelector(".nav-container");
 two.addEventListener("mouseover", function(event) {
   event.stopPropagation();
   event.target.style.backgroundColor = "teal";
+});
+
+const stopProp = document.querySelector("header");
+stopProp.addEventListener("mouseover", function(event) {
+  event.target.style.backgroundColor = "green";
 });
 
 // three
@@ -54,27 +60,24 @@ seven.addEventListener("dblclick", function(event) {
 });
 
 // eight
-let newInput = document.createElement("input");
-newInput.textContent = "Here is some input. You're welcome!";
-
-const eight = document.querySelector("input");
+const eight = document.querySelector("body");
 eight.addEventListener("keydown", function(event) {
   console.log("I've been hit!"); 
 });
 
 
 // nine
-const nine = document.querySelector("input");
-nine.addEventListener("select", function(event) {
-  event.stopPropagation();
-  event.target.style.backgroundColor = "yellow";
+const nine = document.querySelector(".logo-heading");
+nine.addEventListener("mouseup", function(event) {
+  alert("Hi!");
 });
+
 
 // ten 
 const ten = document.querySelectorAll("img");
 ten.forEach(function(index, i){
   ten[i].addEventListener('wheel', function(event) {
-      event.target.style.opacity = .5;
+      event.target.style.opacity = .2;
   });
 });
 
